@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!
+{% endblock %}
+
+{% block body %}
+	<div>
+		<img src="/img/extensions/{{extension.image}}"/>
+		<h1>{{extension.name}}</h1>
+	</div>
+	<div class="cards">
+		{% for card in extension.cards %}
+			<div class="card">
+				<h4>{{card.name}}</h4>
+				<img src="/img/cards/{{card.image}}"/>
+				<p>{{extension.shortcutname}}-{{card.shortcutname}} {{card.rarity}}</p>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

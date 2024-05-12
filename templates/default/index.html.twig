@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!
+{% endblock %}
+
+{% block body %}
+	<div class="extensions">
+		{% for extension in allExtensions %}
+			<div class="card">
+				<a href="{{ path('app_extension', {ext: extension.shortcutname}) }}">
+					<img src="/img/extensions/{{extension.image}}"/>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
